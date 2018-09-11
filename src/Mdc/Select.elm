@@ -34,18 +34,18 @@ type alias Msgs item msg =
     }
 
 
-item : Data item -> Msgs item msg -> item -> Html msg
-item { selected } msgs val =
+item : Data item -> Msgs item msg -> (item -> String) -> item ->  Html msg
+item { selected } msgs toString val =
     li 
         [ selectedClass selected val
         , onClick <| msgs.select val 
         ] 
-        [ text <| Debug.toString val ]
+        [ text <| toString val ]
 
 
-picker : Data item -> Msgs item msg -> Html msg
-picker data msgs =
-    ol [] <| List.map (item data msgs) data.items
+picker : Data item -> Msgs item msg -> (item -> String) -> Html msg
+picker data msgs toString =
+    ol [] <| List.map (item data msgs toString) data.items
 
 
 selectedClass : item -> item -> Attribute msg
@@ -64,13 +64,13 @@ value { selected } msgs =
 {-|
 
 -}
-view : Data item -> Msgs item msg -> Html msg
-view ({ opened } as data) msgs =
+view : Data item -> Msgs item msg -> (item -> String) -> Html msg
+view ({ opened } as data) msgs toString =
     let nodes =
             if opened then
                 div [] 
                     [ div [ class "backdrop", onClick msgs.close ] []
-                    , picker data msgs
+                    , picker data msgs toString
                     ]            
             else
                 value data msgs

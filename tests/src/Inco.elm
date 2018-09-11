@@ -1,4 +1,4 @@
-module Inco exposing (Code(..), list, next, prev, scroll)
+module Inco exposing (Code(..), list, next, prev, scroll, toString)
 
 {-| The inco codes
 
@@ -104,3 +104,21 @@ scroll inco =
         DEQ -> (48 * 8)
         DDU -> (48 * 8)
         DDP -> (48 * 12)
+
+
+toString : Code -> String
+toString inco =
+    case inco of
+        EXW -> "EXW"   
+        FCA -> "FCA"       
+        FAS -> "FAS"        
+        FOB -> "FOB"      
+        CFR -> "CFR"        
+        CIF -> "CIF"        
+        CPT -> "CPT"        
+        CIP -> "CIP"        
+        DAF -> "DAF"        
+        DES -> "DES"        
+        DEQ -> "DEQ"
+        DDU -> "DDU"
+        DDP -> "DDP"

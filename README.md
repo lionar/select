@@ -53,6 +53,24 @@ list =
     ]
 
 
+toString : Code -> String
+toString inco =
+    case inco of
+        EXW -> "EXW"   
+        FCA -> "FCA"       
+        FAS -> "FAS"        
+        FOB -> "FOB"      
+        CFR -> "CFR"        
+        CIF -> "CIF"        
+        CPT -> "CPT"        
+        CIP -> "CIP"        
+        DAF -> "DAF"        
+        DES -> "DES"        
+        DEQ -> "DEQ"
+        DDU -> "DDU"
+        DDP -> "DDP"
+
+
 main =
     Browser.sandbox
         { init = init
@@ -102,4 +120,5 @@ view { inco, selecting } =
         , select = OnSelect
         , toggle = OnToggle
         }
+        toString
 ```

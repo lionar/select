@@ -55,3 +55,4 @@ view { inco, selecting } =
         , select = OnSelect
         , toggle = OnToggle
         }
+        Inco.toString
