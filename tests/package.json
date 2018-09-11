@@ -1,0 +1,30 @@
+{
+  "name": "mdc-select",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Aron Wouters",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "ISC",
+  "scripts": {
+    "dev": "webpack-dev-server --mode development --port 3000"
+  },
+  "devDependencies": {
+    "elm-hot-webpack-loader": "^1.0.1",
+    "elm-webpack-loader": "^5.0.0",
+    "file-loader": "^1.1.10",
+    "loader-utils": "^1.1.0",
+    "css-loader": "^1.0.0",
+    "style-loader": "^0.23.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "webpack": "^4.0.1",
+    "webpack-cli": "^2.0.9",
+    "webpack-dev-server": "^3.0.0"
+  },
+  "dependencies": {
+
+  }
+}
