@@ -8,6 +8,11 @@ A simple material design selectbox
 elm install lionar/select
 
 
+## Styles
+
+The styles are provided separate: [styles](https://github.com/lionar/select/tree/master/resources)
+
+
 ## Example
 
 
