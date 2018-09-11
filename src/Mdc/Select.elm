@@ -56,9 +56,9 @@ selectedClass selected val =
         class ""
 
 
-value : Data item -> Msgs item msg -> Html msg
-value { selected } msgs =
-    span [ onClick msgs.toggle ] [ text <| Debug.toString selected ]
+value : Data item -> Msgs item msg -> (item -> String) -> Html msg
+value { selected } msgs toString =
+    span [ onClick msgs.toggle ] [ text <| toString selected ]
 
 
 {-|
@@ -73,6 +73,6 @@ view ({ opened } as data) msgs toString =
                     , picker data msgs toString
                     ]            
             else
-                value data msgs
+                value data msgs toString
 
     in section [ class "select" ] [ nodes ]
