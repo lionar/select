@@ -1,6 +1,6 @@
 {
     "type": "package",
-    "name": "mdc/select",
+    "name": "lionar/select",
     "summary": "A simple material design select box",
     "source-directories": [
         "src"
