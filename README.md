@@ -127,3 +127,13 @@ view { inco, selecting } =
         }
         toString
 ```
+
+
+## Elm live
+
+running a local dev server with elm live:
+
+```
+cd demo
+elm-live src/Main.elm -- --output=main.js --debug
+```

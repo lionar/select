@@ -1,0 +1,53 @@
+.select {
+    font-family: "Roboto", sans-serif;
+}
+
+.select span {
+    cursor: pointer;
+}
+
+.select .backdrop {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+.select ol {
+    position: fixed;
+    padding: 8px 0;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    background-color: #fff;
+    list-style: none;
+    width: 160px;
+    height: 192px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.select ol li {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+    letter-spacing: 0.00937em;
+    height: 48px;
+    padding: 0 16px;
+    display: grid;
+    align-items: center;
+    transition: background-color 15ms linear;
+    cursor: pointer;
+}
+
+.select ol li:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.select ol li.selected {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.select ol li:active {
+    background-color: rgba(0, 0, 0, 0.16);
+}
