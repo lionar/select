@@ -10,7 +10,7 @@ elm install lionar/select
 
 ## Styles
 
-The styles are provided separate: [styles](https://github.com/lionar/select/tree/master/resources)
+The styles are provided separate: [styles](https://github.com/lionar/select/tree/master/demo/assets)
 
 
 ## Example
